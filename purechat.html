@@ -1,0 +1,28 @@
+<h1>Pure Chat Demo</h1>
+
+
+<script type='text/javascript' data-cfasync='false'>
+window.purechatApi = { l: [], t: [], on: function () { 
+    this.l.push(arguments); } }; (function () { 
+        var done = false; var script = document.createElement('script'); script.async = true;
+        script.type = 'text/javascript';
+        script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript';
+        document.getElementsByTagName('HEAD').item(0).appendChild(script);
+        script.onreadystatechange = script.onload = function (e) {
+            if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+                var w = new PCWidget({c: 'c68d47d4-53c1-4a17-832a-8e359a8cc384', f: true });
+                done = true; } }; })();
+
+
+     purechatApi.on('chatbox:ready', function () {
+     purechatApi.set('visitor.name', 'Melanie Cavill'); // Sets the visitor name to "Joe Doe"
+     purechatApi.set('visitor.firstName', 'Melanie'); // Sets the visitor first name to "Joe"
+     purechatApi.set('visitor.lastName', 'Cavill'); // Sets the visitor last name to "Doe"
+     purechatApi.set('visitor.email', 'mel@wilfordindustries.com'); // Sets the visitor's email address to "joe@joesmarket.com"
+     purechatApi.set('visitor.phoneNumber', '6025551234'); // Sets the visitor's phone number "6025551234"
+     purechatApi.set('visitor.company', 'Wilford Industries'); // Sets the visitor's company "Pure Chat"
+     purechatApi.set('chatbox.unavailableBehavior', 'message');
+     purechatApi.set('chatbox.firstMessage', 'How can the Command Center help you?');
+     purechatApi.set('chatbox.askForRating', false);
+    });
+                </script>
