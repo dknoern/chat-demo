@@ -1,0 +1,44 @@
+<html>
+<head>
+</head>
+<body>
+
+<h1>HubSpot Demo</h1>
+
+
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8733991.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+<script type="text/javascript">
+console.log('hello');
+
+
+console.log("setting identity b");
+  var _hsq = window._hsq = window._hsq || [];
+_hsq.push(["identify",{
+    email: "melanie@wilfordindustries.com",
+    firstName:"Melanie",
+    lastName: "Cavill",
+    shipment: "https://dev-app.cargosignal.com/shipments/23r2r823742374"
+
+}]);
+
+
+function onConversationsAPIReady() {
+
+console.log("setting identity");
+  var _hsq = window._hsq = window._hsq || [];
+_hsq.push(["identify",{
+    email: "mel2@wilfordindustries.com"
+
+}]);
+
+
+  }
+  
+ </script>
+
+
+</body>
